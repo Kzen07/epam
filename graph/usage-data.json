@@ -1178,7 +1178,7 @@
   "metadata": {
     "researchDate": "2026-10-30",
     "reportSha256": "9b376fd664e5fdfda37c0c8f83ca7d3654ce3265689915d8f8a231f8dfc4eb23",
-    "vocabularySha256": "6095228aa96f871bb743efcec37e692af4fc56c9c4ce6fe2f6e2110b34d39929",
+    "vocabularySha256": "1a73405cc0e7ee981444ea3105193761f7333f690b217b73fb7c567e8ffe61aa",
     "corpus": "The twelve anchored analysis paragraphs; headings, implementations, introduction, conclusions, and sources are excluded.",
     "primaryUnit": "Distinct paragraphs per term, separated into explicit and annotated implicit use.",
     "implicitStatus": "Curated interpretive annotations; pending learner review. Counts cover recorded annotations, not an exhaustive semantic truth."

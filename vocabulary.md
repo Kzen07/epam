@@ -1,6 +1,18 @@
 # Vocabulary
 
-Working draft: 20 terms selected from the research report. Definitions are written in plain language and need learner review before submission. The optional personal selection and explanation activity is still pending. Reading examples point to the report; technical background is available in its source list.
+Twenty terms selected from the research report, with plain-language definitions and examples. Personal review has started with RAG, hallucination, tool calling, human-in-the-loop, and fine-tuning. The notes below record the learner's starting understanding and the technical distinctions to learn; they do not imply that every definition or graph annotation has been independently reviewed.
+
+## Personal learning notes
+
+| Term | Starting understanding | Clarification to retain |
+| --- | --- | --- |
+| RAG | A source or knowledge base that supplies information and helps reduce made-up answers. | RAG is the retrieval-and-generation process, not the database itself; it can reduce unsupported answers but cannot eliminate them. |
+| Hallucination | The system invents information and confidently presents an incorrect answer as correct. | This describes a plausible unsupported or incorrect output, without assuming an intention to deceive. |
+| Tool calling | Initially associated with calling tools when an event occurs. | The model requests a structured operation; the application validates and executes it, which differs from a generic event handler. |
+| Human-in-the-loop | A new term, initially associated with giving people priority or following their instructions. | It means a defined human review, correction, or approval step inside a workflow. |
+| Fine-tuning | A new concept with no initial definition. | Further training updates a model's learned parameters using selected examples; it differs from supplying retrieved documents at request time. |
+
+The definitions below incorporate these distinctions. Applying the unfamiliar concepts in a new example is the next learning step. The remaining terms and the graph's implicit interpretations still need learner review.
 
 <a id="llm"></a>
 
@@ -46,7 +58,7 @@ Example: stating the required error behavior before requesting code ([report](re
 
 ## 6. Retrieval-augmented generation (RAG)
 
-An approach that retrieves relevant external information and supplies it to a generative model when answering a request. It helps an application use current or private information, but a retrieved document can still be wrong, irrelevant, or misinterpreted.
+A way to find relevant information in external sources and give it to a model before it answers. This can help reduce made-up answers and use current or private information, but RAG is the process rather than the information store, and it does not guarantee correctness.
 
 Example: finding relevant support articles before drafting an answer ([report](research.md#support-p1)).
 
@@ -78,7 +90,7 @@ Example: keeping a delivery explanation consistent with approved policy ([report
 
 ## 10. Hallucination
 
-A generated statement that sounds plausible but is unsupported or incorrect in its context. Fluent wording and confident tone do not make the statement trustworthy.
+An output in which the model makes up information or confidently presents an unsupported or incorrect statement. It can sound convincing even when it is wrong; calling it a hallucination does not mean that the system intentionally lies.
 
 Example: combining incompatible policies into an invented company rule ([report](research.md#knowledge-p2)).
 
@@ -102,7 +114,7 @@ Example: restricting which customer service operations are available ([report](r
 
 ## 13. Tool calling
 
-A mechanism through which a model requests a structured operation, such as an API call. The application validates and executes the request; the model's request does not itself grant permission to perform the operation.
+The model requests a tool operation with structured arguments, such as asking an order-status API for an order's current state. The application checks permission and arguments, executes an allowed request, and returns the result; this is different from merely running an event handler.
 
 Example: requesting order status through an authorized API ([report](research.md#support-p2)).
 
@@ -118,7 +130,7 @@ Example: checking order status before responding to a customer ([report](researc
 
 ## 15. Human-in-the-loop
 
-A workflow in which a person reviews, approves, or corrects the system at a defined step. The review must actually happen and provide a meaningful decision point, rather than being just a label in the interface.
+A defined step in a workflow where a person reviews, approves, or corrects the system's work. It is more specific than generally following human instructions: for example, an assistant proposes a refund, but a person must approve it before it is issued.
 
 Example: requiring approval before an assistant issues a refund ([report](research.md#support-p2)).
 
@@ -142,7 +154,7 @@ Example: keeping support responses responsive during traffic spikes ([report](re
 
 ## 18. Fine-tuning
 
-Further training an existing model on selected examples to change its learned parameters and adapt behavior. It differs from adding documents to a prompt and is not automatically the best way to keep rapidly changing facts current.
+Further training an existing model on selected examples to change its learned parameters and adapt its behavior. For example, approved tutoring dialogues can help adapt teaching style; simply adding documents to a request does not perform fine-tuning.
 
 Example: adapting teaching style using curated tutoring examples ([report](research.md#education-p2)).
 

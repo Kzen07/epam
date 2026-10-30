@@ -3,9 +3,10 @@
 EPAM training assignment: practical generative AI applications, a vocabulary, and a reproducible relationship graph.
 
 - [Research report](research.md): six application areas, two analysis paragraphs per case, twelve implementation examples, and fourteen primary sources.
-- [Vocabulary](vocabulary.md): twenty technical terms with plain-language definitions and report examples; learner review is pending.
+- [Vocabulary](vocabulary.md): twenty technical terms with plain-language definitions and report examples; personal review has started with five terms.
 - [Relationship graph](graph/index.html): an interactive, offline map with separate explicit and implicit frequencies and inspectable evidence.
 - [Counting methodology](graph/README.md): corpus boundaries, aliases, annotation rules, and limitations.
+- [Resource access checks](access-checks.md): the supplied course resources, observed sign-in pages, and outstanding access issues.
 
 ## View and reproduce
 
@@ -28,6 +29,7 @@ npm run check
 ```text
 research.md                 Application report and sources
 vocabulary.md               Definitions and examples
+access-checks.md            Course resources and access-check results
 graph/
   README.md                 Counting and interpretation rules
   terms.json                Term IDs and explicit aliases
@@ -52,23 +54,23 @@ tests/
 | --- | --- |
 | Dedicated shareable repository | Public repository: [Kzen07/epam](https://github.com/Kzen07/epam) |
 | Research Markdown file | Prepared with six cases and linked implementations |
-| Vocabulary Markdown file | Draft prepared; learner selection and explanation review pending |
+| Vocabulary Markdown file | Prepared; personal learning notes added for five terms, further review pending |
 | Optional relationship graph | Implemented with separate paragraph frequencies and evidence |
 | Reproducibility | Build, freshness validation, and automated counting tests included |
-| Required course-resource access | Pending: the course resource list and authenticated access checks have not been supplied |
-| Submission text file | Pending: confirmed submission name and actual `@epam.com` email are required |
+| Required course-resource access | Resource list received and initial checks recorded; authenticated EPAM access, current learning path, and educational Copilot license remain unverified; see [access checks](access-checks.md) |
+| Submission text file | Prepared separately as `Intro_Aldiyar_Amantay.txt` with the learner-supplied EPAM email and the verified repository URL |
 | Upload and final submission | Pending; requires the learner's explicit confirmation |
 
-The plain-language vocabulary is a starting point. Before submission, the learner should select the terms they want to retain, explain selected definitions in their own words, and review the implicit annotations. This activity has not yet been completed and is not represented as finished manual work.
+The learner has contributed initial explanations for RAG, hallucination, tool calling, and human-in-the-loop, and identified fine-tuning as an unfamiliar concept. The vocabulary records those starting points and clarified distinctions. Further review of the definitions and implicit annotations remains pending; a full independent review is not claimed.
 
 ## Access checks
 
-Checked on 30 October 2026: the public repository could be cloned; repository metadata identifies it as public; local Git is available; Git Credential Manager lists the account `Kzen07`. Successful publishing is verified through the actual Git push and subsequent remote checks, rather than inferred from credential presence. A connected GitHub integration returned `Unknown tool`, so this project uses the local Git client.
+Checked on 30 October 2026: the repository is public, Git clone and push succeeded, the remote commit matched the local commit, and GitHub associated the author and committer with `Kzen07`. The initial GitHub Actions validation completed successfully. A connected GitHub integration returned `Unknown tool`, so this project uses the local Git client.
 
-Public research documentation was read successfully. This does not establish authenticated access to EPAM's platform, DIAL, CodeMie, Copilot, or any paid product. No course login or platform submission has been verified. The original pasted instructions did not include the course's resource links.
+The learner subsequently supplied the course resource list. Initial checks reached public or sign-in pages for most services, observed a DNS failure for the supplied EliteA hostname, and a browser navigation timeout for AIST. The authenticated GitHub settings page displayed Copilot Free; the course-provided educational license remains unconfirmed. See [access-checks.md](access-checks.md) for per-resource evidence and limitations. No course enrollment or platform submission has been verified.
 
 ## Submission procedure
 
-After reviewing all requirements, prepare `Intro_<first_name>_<last_name>.txt` containing the actual EPAM email and this repository URL. The file is prepared outside this public repository. Do not substitute the Git commit email for the required EPAM email.
+`Intro_Aldiyar_Amantay.txt` has been prepared outside this public repository using the learner-supplied EPAM email and the verified repository URL. It contains exactly those two lines, without labels or extra comments. The Git commit email is not used in place of the EPAM email.
 
 The original instructions allow only one upload attempt. The learner must explicitly confirm uploading the prepared file and submitting it on the training platform. No upload has been performed. Optional work and automation provide evidence of initiative, but the mentor determines the final score.
