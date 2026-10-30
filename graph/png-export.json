@@ -1,0 +1,8 @@
+{
+  "inputDataSha256": "8a2138d75559d426702ad3a51796a92e3a64dea3743c980649e47bd215cfe7fe",
+  "inputSvgSha256": "336e67b4cd381e6e7b46aa09b8c6688dd9ed892b15e533f6deef61ccd8a474b2",
+  "pngSha256": "cc017a97579528eedaca1655bd895696ec64d8097cce2edadbff6273b8191136",
+  "renderer": "sharp 0.35.5",
+  "width": 3240,
+  "height": 2900
+}

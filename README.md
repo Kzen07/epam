@@ -5,8 +5,11 @@ EPAM training assignment: practical generative AI applications, a vocabulary, an
 - [Research report](research.md): six application areas, two analysis paragraphs per case, twelve implementation examples, and fourteen primary sources.
 - [Vocabulary](vocabulary.md): twenty technical terms with plain-language definitions and report examples; personal review has started with five terms.
 - [Relationship graph](graph/index.html): an interactive, offline map with separate explicit and implicit frequencies and inspectable evidence.
+- [Static graph image](graph/relationships.png): a readable PNG overview of every term-to-application relationship, with an [SVG version](graph/relationships.svg) and recorded export provenance.
 - [Counting methodology](graph/README.md): corpus boundaries, aliases, annotation rules, and limitations.
 - [Resource access checks](access-checks.md): the supplied course resources, observed sign-in pages, and outstanding access issues.
+
+![Vocabulary-to-application relationships with separate explicit and implicit paragraph frequencies](graph/relationships.png)
 
 ## View and reproduce
 
@@ -20,9 +23,22 @@ cd epam
 npm run build
 npm test
 npm run check
+npm run check:export
 ```
 
-`build` produces `graph/usage-data.json` and `graph/index.html`. `check` fails if those files no longer match their source inputs. GitHub Actions runs the checks on pushes and pull requests.
+`build` produces `graph/usage-data.json` and `graph/index.html`. `check` fails if those files no longer match their source inputs. `check:export` verifies the static SVG and the PNG provenance hashes without loading an image-rendering package. GitHub Actions runs the checks on pushes and pull requests.
+
+### Static exports
+
+`npm run export` regenerates the SVG with Node.js built-ins. The committed PNG can be viewed directly on GitHub. Regenerating the PNG requires the optional `sharp` renderer:
+
+```sh
+npm install --no-save --package-lock=false sharp
+npm run export:png
+npm run check:export
+```
+
+The normal build, tests, and validation still need no dependency installation. PNG regeneration records the source data hash, SVG hash, image hash, renderer version, and pixel dimensions in `graph/png-export.json`. Different font environments can change pixels; the generated SVG and recorded counts remain inspectable.
 
 ## Project structure
 
@@ -39,9 +55,13 @@ graph/
   viewer.js                 Filters, graph, and evidence inspector
   usage-data.json            Generated counts and evidence
   index.html                Generated standalone viewer
+  relationships.svg         Generated static adjacency matrix
+  relationships.png         PNG export at 3240 by 2900 pixels
+  png-export.json           Input and output hashes for the PNG
 scripts/
   analysis.mjs              Corpus extraction and counting
   build-graph.mjs            Reproducible artifact generation
+  export-graph.mjs           Static SVG and optional PNG export
 tests/
   analysis.test.mjs          Counting and annotation checks
 .github/workflows/
@@ -55,7 +75,7 @@ tests/
 | Dedicated shareable repository | Public repository: [Kzen07/epam](https://github.com/Kzen07/epam) |
 | Research Markdown file | Prepared with six cases and linked implementations |
 | Vocabulary Markdown file | Prepared; personal learning notes added for five terms, further review pending |
-| Optional relationship graph | Implemented with separate paragraph frequencies and evidence |
+| Optional relationship graph | Interactive HTML plus SVG and PNG overview; separate paragraph frequencies and quoted evidence |
 | Reproducibility | Build, freshness validation, and automated counting tests included |
 | Required course-resource access | Check documented: learner reports that only AIST and EliteA do not open; direct observations and the separate Copilot Free / educational-license uncertainty are recorded in [access checks](access-checks.md) |
 | Submission text file | Prepared separately as `Intro_Aldiyar_Amantay.txt` with the learner-supplied EPAM email and the verified repository URL |

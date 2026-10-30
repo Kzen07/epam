@@ -19,5 +19,9 @@ jobs:
         run: npm test
       - name: Verify generated artifacts
         run: npm run check
+      - name: Verify static graph
+        run: npm run check:export
+      - name: Validate assignment structure
+        run: npm run validate
       - name: Check whitespace
         run: git diff --check

@@ -4,6 +4,8 @@
 
 This is a bipartite graph: vocabulary terms on the left and research application areas on the right. An edge means that a term is used in at least one analysis paragraph of that application area. It is not a claim that one term causes another or that terms joined to the same case always occur together. Select a term, use the relationship or application filters, or search for an alias. The evidence inspector provides report anchors, named matches, exact quotations, and interpretation reasons.
 
+The [PNG overview](relationships.png) and [SVG version](relationships.svg) show the same bipartite relationships as an adjacency matrix: twenty term rows by six application columns. Each cell contains separate E and I paragraph counts, and the final column contains each term's totals. This view exposes all relationships without crossed lines; the HTML remains the evidence-inspection view.
+
 Solid blue lines represent explicit usage; dashed amber lines represent implicit usage. They are displayed separately even when both kinds occur in different paragraphs of the same case. Edge labels show paragraph counts within that case. The frequency ledger also reports literal explicit mentions as a secondary measure.
 
 ## Corpus and units
@@ -42,8 +44,11 @@ These annotations are interpretive and pending learner review. They cover the re
 npm run build
 npm test
 npm run check
+npm run check:export
 ```
 
 The build fails on unknown IDs, missing vocabulary anchors, absent quotes, missing reasons, duplicate implicit pairs, explicit/implicit overlap, missing corpus paragraphs, or vocabulary terms without report usage. It stores report and vocabulary SHA-256 hashes in the generated data. Output is deterministic for identical inputs; no build timestamp changes the files on every run.
 
 Tests exercise word boundaries, overlapping phrases, Unicode dash normalization, occurrence-versus-paragraph counts, evidence validation, and corpus completeness. They verify the calculation rules, not the truth of the report or the educational value of a definition. The HTML embeds its data, styles, and scripts, so it works directly from a downloaded repository.
+
+`npm run export` regenerates the SVG without dependencies. The optional `npm run export:png` command uses `sharp` to regenerate the PNG at double resolution and records source and output hashes in `png-export.json`. See the root README for installation of this optional renderer. The export check validates that the SVG, PNG bytes, and recorded graph-data version agree; no rendering package is needed to check the committed export.

@@ -7,7 +7,11 @@
   "scripts": {
     "build": "node scripts/build-graph.mjs",
     "check": "node scripts/build-graph.mjs --check",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "export": "node scripts/export-graph.mjs",
+    "export:png": "node scripts/export-graph.mjs --png",
+    "check:export": "node scripts/export-graph.mjs --check",
+    "validate": "node scripts/validate-assignment.mjs"
   },
   "engines": { "node": ">=20" }
 }
