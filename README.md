@@ -57,7 +57,7 @@ tests/
 | Vocabulary Markdown file | Prepared; personal learning notes added for five terms, further review pending |
 | Optional relationship graph | Implemented with separate paragraph frequencies and evidence |
 | Reproducibility | Build, freshness validation, and automated counting tests included |
-| Required course-resource access | Resource list received and initial checks recorded; authenticated EPAM access, current learning path, and educational Copilot license remain unverified; see [access checks](access-checks.md) |
+| Required course-resource access | Check documented: learner reports that only AIST and EliteA do not open; direct observations and the separate Copilot Free / educational-license uncertainty are recorded in [access checks](access-checks.md) |
 | Submission text file | Prepared separately as `Intro_Aldiyar_Amantay.txt` with the learner-supplied EPAM email and the verified repository URL |
 | Upload and final submission | Pending; requires the learner's explicit confirmation |
 
@@ -67,7 +67,7 @@ The learner has contributed initial explanations for RAG, hallucination, tool ca
 
 Checked on 30 October 2026: the repository is public, Git clone and push succeeded, the remote commit matched the local commit, and GitHub associated the author and committer with `Kzen07`. The initial GitHub Actions validation completed successfully. A connected GitHub integration returned `Unknown tool`, so this project uses the local Git client.
 
-The learner subsequently supplied the course resource list. Initial checks reached public or sign-in pages for most services, observed a DNS failure for the supplied EliteA hostname, and a browser navigation timeout for AIST. The authenticated GitHub settings page displayed Copilot Free; the course-provided educational license remains unconfirmed. See [access-checks.md](access-checks.md) for per-resource evidence and limitations. No course enrollment or platform submission has been verified.
+The learner subsequently supplied the course resource list and confirmed that only AIST and EliteA do not open; the remaining listed resources open in the learner's session. Direct checks observed a DNS failure for the supplied EliteA hostname and a browser navigation timeout for AIST. The authenticated GitHub settings page displayed Copilot Free; the course-provided educational license remains unconfirmed. See [access-checks.md](access-checks.md) for the distinction between direct observations and learner-reported access. Course enrollment and upload controls have not been independently inspected, and no platform submission has been performed.
 
 ## Submission procedure
 
