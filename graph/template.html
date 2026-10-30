@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>epam · Research relationships</title>
+  <style>/* STYLE */</style>
+</head>
+<body>
+  <div class="shell">
+    <header><div class="wordmark">epam<span> / </span><small>RESEARCH ATLAS</small></div><a href="../README.md">Project notes ↗</a></header>
+    <main>
+      <div class="intro"><div><p class="eyebrow">GENERATIVE AI APPLICATIONS · 30 OCT 2026</p><h1>From words<br>to real work<span>.</span></h1><p class="lead">Explore how twenty technical concepts appear across six application areas. Every connection leads back to evidence.</p></div><div class="stats"><div><strong>20</strong><span>vocabulary terms</span></div><div><strong>06</strong><span>application areas</span></div><div><strong>12</strong><span>analysis paragraphs</span></div></div></div>
+      <section class="method"><span class="tag explicit">E</span><p><b>Explicit</b> · A named term or listed alias appears in a paragraph.</p><span class="tag implicit">I</span><p><b>Implicit</b> · A recorded annotation identifies the concept without naming it.</p><span class="method-note">Both frequencies count paragraphs, not words.</span></section>
+      <div class="controls"><label>Find a term<input id="search" type="search" placeholder="Try grounding or token…"></label><label>Relationship<select id="mode"><option value="all">Explicit + implicit</option><option value="explicit">Explicit only</option><option value="implicit">Implicit only</option></select></label><label>Application<select id="case"><option value="all">All six areas</option></select></label><button id="all-edges" type="button" aria-pressed="false">Show all connections</button></div>
+      <div class="workspace"><section class="map-card"><div class="card-heading"><h2>Relationship map</h2><span id="connection-summary"></span></div><div class="map-scroll"><svg id="map" viewBox="0 0 860 770" role="img" aria-label="Vocabulary terms connected to report application areas"></svg></div><p class="map-help">Select a term to focus its connections. Solid blue = explicit · dashed amber = implicit. Edge labels count paragraphs within an area.</p></section><aside class="evidence-card" aria-live="polite"><p class="eyebrow">EVIDENCE INSPECTOR</p><h2 id="selected-label"></h2><p id="selected-counts"></p><a id="vocabulary-link" href="../vocabulary.md">Read definition ↗</a><div id="evidence"></div></aside></div>
+      <section class="table-card"><div class="card-heading"><h2>Frequency ledger</h2><span id="table-caption">Totals across the twelve analysis paragraphs</span></div><div class="table-scroll"><table><thead><tr><th scope="col">Concept</th><th scope="col">Explicit paragraphs</th><th scope="col">Implicit paragraphs</th><th scope="col">Explicit mentions</th></tr></thead><tbody id="ledger"></tbody></table></div></section>
+      <details class="notes"><summary>How to read and reproduce the counts</summary><p>Each primary frequency is a count of distinct paragraphs containing a term: explicitly by lexical matching, or implicitly by a curated annotation. A term-paragraph pair cannot be both. Different terms can occur in the same paragraph, so totals across terms can exceed twelve.</p><p>Matching ignores case, recognizes listed aliases, uses word boundaries, and gives the longest overlapping phrase precedence. “Prompt injection” is therefore not also a plain “prompt” hit. Explicit mentions count accepted textual matches; “large language model (LLM)” has two mentions but one explicit paragraph.</p><p>Only the twelve anchored analysis paragraphs are counted. Titles, source tables, implementation lists, the vocabulary, and conclusions are excluded. Implicit counts reflect recorded interpretations with exact quotations and reasons; they are not an automatic or exhaustive measure of meaning. Learner review is pending.</p><p>Run <code>npm run build</code> to rebuild the JSON and this offline page. Run <code>npm test</code> and <code>npm run check</code> to validate counting and freshness. Source hashes identify the report and vocabulary versions.</p><p id="source-hash"></p></details>
+    </main><footer><span>epam / Training assignment</span><span>Local, self-contained HTML · no network requests</span></footer>
+  </div>
+  <noscript>This interactive graph requires JavaScript. The research report and vocabulary remain readable as Markdown files.</noscript>
+  <script>/* DATA */
+/* VIEWER */</script>
+</body>
+</html>

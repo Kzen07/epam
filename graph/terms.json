@@ -1,0 +1,22 @@
+[
+  {"id":"llm","label":"LLM","aliases":["large language model","large language models","LLM","LLMs"]},
+  {"id":"token","label":"Token","aliases":["token","tokens"]},
+  {"id":"context-window","label":"Context window","aliases":["context window","context windows"]},
+  {"id":"prompt","label":"Prompt","aliases":["prompt","prompts"]},
+  {"id":"prompt-engineering","label":"Prompt engineering","aliases":["prompt engineering"]},
+  {"id":"rag","label":"RAG","aliases":["retrieval-augmented generation","retrieval augmented generation","RAG"]},
+  {"id":"embedding","label":"Embedding","aliases":["embedding","embeddings"]},
+  {"id":"vector-database","label":"Vector database","aliases":["vector database","vector databases"]},
+  {"id":"grounding","label":"Grounding","aliases":["grounding","grounded"]},
+  {"id":"hallucination","label":"Hallucination","aliases":["hallucination","hallucinations"]},
+  {"id":"prompt-injection","label":"Prompt injection","aliases":["prompt injection","prompt injections"]},
+  {"id":"guardrails","label":"Guardrails","aliases":["guardrail","guardrails"]},
+  {"id":"tool-calling","label":"Tool calling","aliases":["tool calling"]},
+  {"id":"agent","label":"AI agent","aliases":["AI agent","AI agents"]},
+  {"id":"human-in-the-loop","label":"Human-in-the-loop","aliases":["human-in-the-loop","human in the loop"]},
+  {"id":"evaluation","label":"Evaluation","aliases":["evaluation","evaluations"]},
+  {"id":"latency","label":"Latency","aliases":["latency"]},
+  {"id":"fine-tuning","label":"Fine-tuning","aliases":["fine-tuning","fine tuning","fine-tune","fine-tuned"]},
+  {"id":"multimodal","label":"Multimodal","aliases":["multimodal"]},
+  {"id":"inference","label":"Inference","aliases":["inference"]}
+]
