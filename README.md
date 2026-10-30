@@ -24,9 +24,10 @@ npm run build
 npm test
 npm run check
 npm run check:export
+npm run validate
 ```
 
-`build` produces `graph/usage-data.json` and `graph/index.html`. `check` fails if those files no longer match their source inputs. `check:export` verifies the static SVG and the PNG provenance hashes without loading an image-rendering package. GitHub Actions runs the checks on pushes and pull requests.
+`validate` checks report structure, source links, vocabulary anchors, graph integrity, and access metadata; the [acceptance review](acceptance-review.md) lists what it covers and what still needs a human. `build` produces `graph/usage-data.json` and `graph/index.html`. `check` fails if those files no longer match their source inputs. `check:export` verifies the static SVG and the PNG provenance hashes without loading an image-rendering package. GitHub Actions runs the checks on pushes and pull requests.
 
 ### Static exports
 
@@ -46,6 +47,7 @@ The normal build, tests, and validation still need no dependency installation. P
 research.md                 Application report and sources
 vocabulary.md               Definitions and examples
 access-checks.md            Course resources and access-check results
+acceptance-review.md        Structural acceptance matrix and its limits
 graph/
   README.md                 Counting and interpretation rules
   terms.json                Term IDs and explicit aliases
@@ -62,6 +64,7 @@ scripts/
   analysis.mjs              Corpus extraction and counting
   build-graph.mjs            Reproducible artifact generation
   export-graph.mjs           Static SVG and optional PNG export
+  validate-assignment.mjs    Structural acceptance checks (npm run validate)
 tests/
   analysis.test.mjs          Counting and annotation checks
 .github/workflows/
